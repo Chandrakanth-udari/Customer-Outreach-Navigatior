@@ -71,4 +71,4 @@ See [`sql/`](sql/) for the backing objects:
 
 ---
 
-*Screenshots use anonymized sample data. The database name (`ClientDW`) is a placeholder.*
+*Screenshots use anonymized sample data. SQL table definitions are illustrative; column types reflect the production schema.*
