@@ -21,24 +21,7 @@ The result: a rep can walk into any town and immediately know who to see and who
 
 ## How It Works
 
-```
- Field sales rep (phone/tablet)            Back-office data
- ┌──────────────────────────────┐         ┌──────────────────────────────┐
- │ Customer Outreach Navigator   │  read   │ SQL: distributor_cache        │
- │ (Power Apps Canvas)            ├────────►│  (nearby accounts + sales)    │
- │                               │         └──────────────┬───────────────┘
- │  choose state + city          │                        ▲ scheduled refresh
- │  → nearby accounts w/ sales   │                        │
- │  → log follow-up + next date  │  write  ┌──────────────┴───────────────┐
- │                               ├────────►│ Power Automate ← places API   │
- └──────────────┬───────────────┘         └──────────────────────────────┘
-                │ write
-                ▼
-        ┌──────────────────────────────┐
-        │ SQL: distributor_notes        │  → drives the follow-up calendar
-        │  (interactions + next date)   │
-        └──────────────────────────────┘
-```
+![Customer outreach workflow](screenshots/00-customer-outreach-workflow.png)
 
 ## Key Features
 
